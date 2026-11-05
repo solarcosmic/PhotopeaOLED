@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Photopea OLED Theme",
+    "version": "1.0.0",
+    "description": "A true dark mode for Photopea",
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://*.photopea.com/*",
+                "https://photopea.com/*"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["theme.css"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
